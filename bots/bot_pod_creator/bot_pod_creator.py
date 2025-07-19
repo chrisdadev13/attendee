@@ -45,7 +45,7 @@ class BotPodCreator:
             bot_name = f"bot-{bot_id}-{uuid.uuid4().hex[:8]}"
 
         if bot_cpu_request is None:
-            bot_cpu_request = os.getenv("BOT_CPU_REQUEST", "4")
+            bot_cpu_request = os.getenv("BOT_CPU_REQUEST", "1")
 
         # Set the command based on bot_id
         # Run entrypoint script first, then the bot command
