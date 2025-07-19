@@ -25,7 +25,8 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # Disabling these because it's enforced at the ingress level on GKE
 # SECURE_SSL_REDIRECT = True
 # SECURE_HSTS_SECONDS = 60
-SESSION_COOKIE_SECURE = True
+# Temporarily disable secure cookies for HTTP access during testing
+SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
