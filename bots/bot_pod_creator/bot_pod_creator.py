@@ -25,7 +25,7 @@ class BotPodCreator:
             
         # Parse instance from version (matches your pattern of {hash}-{timestamp})
         self.app_instance = f"{self.app_name}-{self.app_version.split('-')[-1]}"
-        default_pod_image = f"nduncan{self.app_name}/{self.app_name}"
+        default_pod_image = "chrisdadev/attendee-aws"
         self.image = f"{os.getenv('BOT_POD_IMAGE', default_pod_image)}:{self.app_version}"
 
     def create_bot_pod(
